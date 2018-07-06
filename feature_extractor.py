@@ -26,3 +26,21 @@ class FeatureExtractor:
             else:
                 vector.append(len(value))
         return vector
+
+        def create_vector_using_set(features, data):
+        patient_value_dictionary = {}
+        for set_value in features:
+            for (patient_key, patient_value) in data.items():
+                if patient_value == set_value :
+                    if patient_value in patient_value_dictionary:
+                        patient_value_dictionary[patient_value] = patient_value_dictionary[patient_value] + 1
+                    else:
+                        patient_value_dictionary[patient_value] = 1
+                else:
+                    if patient_value not in patient_value_dictionary:
+                        patient_value_dictionary[set_value] = 0
+
+        patient_vector = []
+        for value in patient_value_dictionary.values():
+            patient_vector.append(value)
+        return patient_vector
