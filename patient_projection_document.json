@@ -1,0 +1,9 @@
+{
+  "patientSequenceNumber" : 1.0,
+  "_id" : 0.0,
+  "ethnicity" : 1.0,
+  "diseases" : 1.0,
+  "races" : 1.0,
+  "gender" : 1.0,
+  "biopsies": 1.0
+}
